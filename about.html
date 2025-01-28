@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TS Architecture - About</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Abel", sans-serif;
+        }
+
+        .logo1 {
+            width: 6rem;
+            height: 6rem;
+            border: .4rem solid #dba81b;
+            position: relative;
+        }
+
+        .logo2 {
+            width: 5rem;
+            height: 5rem;
+            background-color: #000000;
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            z-index: 10;
+        }
+
+        .logo3 {
+            width: 5rem;
+            height: 5rem;
+            border: .4rem solid #dba81b;
+            background-color: #000000;
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            z-index: 20;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .brand span {
+            font-size: 3rem;
+            color: #ffffff;
+            letter-spacing: .3rem;
+            margin-left: 2rem;
+        }
+
+        .navbar {
+            background-color: #000000;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #1a1a1a;
+        }
+
+        .navbar-brand span {
+            color: #ffffff;
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        .navigation a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+
+        .navigation a:hover {
+            background-color: #dba81b;
+            color: #000000;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .about {
+            padding: 50px 0;
+            background-color: #000000;
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #1a1a1a;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-content h1 {
+            font-size: 2.8em;
+            padding-bottom: 15px;
+            color: #dba81b;
+        }
+
+        .about-content h2 {
+            font-size: 2.2em;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .about-content p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .about-image {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .footer {
+            background-color: #000000;
+            color: #dba81b;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            border-top: 2px solid #1a1a1a;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="brand navbar-brand">
+            <div class="logo1"></div>
+            <div class="logo2"></div>
+            <div class="logo3"></div>
+            <span>TS ARCHITECTURE</span>
+        </div>
+        <div class="navigation">
+            <a href="archi.html">HOME</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="blog.html">BLOG</a>
+            <a href="reviews.html">REVIEWS</a>
+            <a href="contact.html">CONTACT</a>
+        </div>
+    </nav>
+
+    <section class="about">
+        <div class="about-content">
+            <h1>About Us</h1>
+            <p>Welcome to TS Architecture, a forward-thinking architecture firm dedicated to creating innovative, sustainable, and functional designs. With a passion for blending artistry and engineering, we specialize in transforming spaces that inspire, support, and elevate the human experience.</p>
+            
+            <h1>Our Vision</h1>
+            <p>We envision a world where architecture is not just about buildings, but about creating environments that enrich lives. Our designs reflect a deep understanding of our clients' needs, blending aesthetic appeal with practical functionality. Every project is an opportunity to craft spaces that resonate with their surroundings, enhance quality of life, and stand the test of time.</p>
+            
+            <div class="about-image">
+                <img src="https://img.freepik.com/premium-photo/futuristic-cityscape-with-lush-green-skyscrapers-sustainable-urban-architecture-clear_996993-8106.jpg" alt="Our Vision">
+            </div>
+            
+            <h1>Our Mission</h1>
+            <p>Our mission is simple: to provide exceptional architectural services that create enduring value. We are committed to delivering designs that are thoughtful, sustainable, and tailored to our client's vision. From concept to completion, we work closely with our clients to ensure their goals are met with precision and passion.</p>
+            
+            <div class="about-image">
+                <img src="https://myfuture.com/assets/Architecture_civilian-d8c33a49a71cc1fbc9b0d088a0992c1b6d7bd76aa999eb333e424f70826c91f3.jpg" alt="Our Mission">
+            </div>
+
+            <h1>Why Choose Us?</h1>
+            <h2>1. Innovative Design Solutions</h2>
+            <p>We push the boundaries of creativity and functionality, using cutting-edge technology and the latest architectural trends to craft designs that are as unique as our clients.</p>
+            <h2>2. Expertise & Experience</h2>
+            <p>With 20 years in the industry, our team brings a wealth of knowledge and a diverse portfolio that showcases our ability to handle projects of all sizes and complexities.</p>
+            <h2>3. Sustainability</h2>
+            <p>We are committed to sustainable practices, ensuring our designs are energy-efficient and environmentally responsible.</p>
+            <h2>4. Collaboration</h2>
+            <p>We believe in close collaboration with clients, consultants, and stakeholders to ensure that every project is a true reflection of their vision.</p>
+
+            <h1>Our Team</h1>
+            <p>Our team consists of highly skilled architects, designers, and planners who are passionate about their craft and dedicated to delivering exceptional results. From concept to completion, we work collaboratively to bring your vision to life.</p>
+            
+            <div class="about-image">
+                <img src="https://www.huntingforgeorge.com/wp-content/uploads/Feature-Image-Winter-Architecture-Hunting-for-George-Community-Journal-Team_Photography-by-Sayher-Heffernan.jpg" alt="Our Team">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 TS Architecture. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

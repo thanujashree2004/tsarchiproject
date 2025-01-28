@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TS Architecture - Blog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
+        }
+		
+
+        body {
+            background-color: #1a1a1a;
+            color: #f4f4f4;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .navbar {
+            background-color: #000;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar-brand span {
+            color: #f4f4f4;
+            font-size: 2em;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .navigation a {
+            color: #f4f4f4;
+            text-decoration: none;
+            padding: 12px 18px;
+            margin-left: 20px;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .navigation a:hover {
+            color: #dba81b;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .container h1 {
+            color: #dba81b;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .search-container {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .search-container input {
+            padding: 12px;
+            font-size: 1rem;
+            width: 60%;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .blog-posts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .blog-post {
+            background-color: #222;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .blog-post h3 {
+            color: #f4f4f4;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .blog-post p {
+            color: #b3b3b3;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .blog-post .date {
+            color: #777;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .like-btn {
+            background-color: #0000;
+            color: #ffff;
+            padding: 12px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .like-btn.liked {
+            background-color: #e74c3c;
+            color: #fff;
+        }
+
+        .like-btn .heart {
+            font-size: 1.5rem;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 15px;
+        }
+
+        .footer {
+            background-color: #000;
+            color: #dba81b;
+            text-align: center;
+            padding: 30px;
+            border-top: 2px solid #333;
+        }
+
+        .footer p {
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navigation {
+                margin-top: 15px;
+            }
+
+            .buttons {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <span>TS ARCHITECTURE</span>
+        </div>
+        <div class="navigation">
+            <a href="archi.html">HOME</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+            <a href="reviews.html">REVIEWS</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Architecture Insights & Blog</h1>
+
+        <!-- Search bar -->
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search blog posts...">
+        </div>
+
+        <div class="blog-posts">
+            <!-- Repeat for 20 posts -->
+            <!-- Post 1 -->
+            <div class="blog-post">
+                <h3>5 Key Design Trends in 2025</h3>
+                <p class="date">January 5, 2025</p>
+                <p>As we enter a new year, explore the architectural trends set to define 2025. From sustainable materials to tech-driven designs...</p>
+                <div class="buttons">
+                    <button class="like-btn" id="like-btn1" onclick="toggleLike('like-btn1')">
+                        <span class="heart">&#9825;</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Post 2 -->
+            <div class="blog-post">
+                <h3>Sustainable Architecture: A Necessity, Not a Trend</h3>
+                <p class="date">December 15, 2024</p>
+                <p>Discover why sustainable architecture is no longer a trend but a necessity. Explore the innovations in eco-friendly materials...</p>
+                <div class="buttons">
+                    <button class="like-btn" id="like-btn2" onclick="toggleLike('like-btn2')">
+                        <span class="heart">&#9825;</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Post 3 -->
+            <div class="blog-post">
+                <h3>Transforming Commercial Spaces: Modern Design</h3>
+                <p class="date">November 20, 2024</p>
+                <p>Commercial spaces are evolving to meet the demands of modern businesses. Learn how innovative architectural designs enhance productivity...</p>
+                <div class="buttons">
+                    <button class="like-btn" id="like-btn3" onclick="toggleLike('like-btn3')">
+                        <span class="heart">&#9825;</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Post 4 -->
+            <div class="blog-post">
+                <h3>Reimagining Urban Spaces for the Future</h3>
+                <p class="date">October 10, 2024</p>
+                <p>Urban spaces need to evolve to become more inclusive, sustainable, and adaptive. This blog post explores the future of urban design...</p>
+                <div class="buttons">
+                    <button class="like-btn" id="like-btn4" onclick="toggleLike('like-btn4')">
+                        <span class="heart">&#9825;</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Post 5 -->
+            <div class="blog-post">
+                <h3>The Rise of Smart Homes in Architecture</h3>
+                <p class="date">September 30, 2024</p>
+                <p>Smart homes are no longer just a trend; they are revolutionizing the way we think about design. Explore the integration of technology in architecture...</p>
+                <div class="buttons">
+                    <button class="like-btn" id="like-btn5" onclick="toggleLike('like-btn5')">
+                        <span class="heart">&#9825;</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Add more posts here -->
+
+            <!-- Post 20 -->
+            <div class="blog-post">
+                <h3>The Future of Eco-Friendly Materials</h3>
+                <p class="date">July 25, 2024</p>
+                <p>In this post, we look at the future of eco-friendly materials and their role in sustainable architecture. What materials are reshaping the industry...</p>
+                <div class="buttons">
+                    <button class="like-btn" id="like-btn20" onclick="toggleLike('like-btn20')">
+                        <span class="heart">&#9825;</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 TS Architecture. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Toggle like button between liked and unliked state
+        function toggleLike(buttonId) {
+            const button = document.getElementById(buttonId);
+            const heart = button.querySelector('.heart');
+            button.classList.toggle('liked');
+            heart.innerHTML = button.classList.contains('liked') ? '&#10084;' : '&#9825;';
+        }
+
+        // Dynamic search functionality
+        const searchInput = document.getElementById("search");
+        searchInput.addEventListener("input", function() {
+            const searchQuery = searchInput.value.toLowerCase();
+            const posts = document.querySelectorAll('.blog-post');
+
+            posts.forEach(post => {
+                const title = post.querySelector("h3").textContent.toLowerCase();
+                if (title.includes(searchQuery)) {
+                    post.style.display = "block";
+                } else {
+                    post.style.display = "none";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

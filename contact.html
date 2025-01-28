@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TS Architecture - Contact</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: #f4f4f4;
+        }
+
+        .navbar {
+            background-color: #000;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar-brand span {
+            color: #f4f4f4;
+            font-size: 2em;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .navigation a {
+            color: #f4f4f4;
+            text-decoration: none;
+            padding: 12px 18px;
+            margin-left: 20px;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .navigation a:hover {
+            color: #dba81b;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .contact {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .contact h1 {
+            color: #dba81b;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .contact-form {
+            background-color: #222;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin-bottom: 50px;
+        }
+
+        .contact-form label {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: #f4f4f4;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .contact-form button {
+            background-color: #dba81b;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #b48814;
+        }
+
+        .contact-team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .team-member {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .team-member img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .team-member h3 {
+            color: #f4f4f4;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+
+        .team-member p {
+            color: #b3b3b3;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .team-member a {
+            color: #dba81b;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .team-member a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .footer {
+            background-color: #000;
+            color: #dba81b;
+            text-align: center;
+            padding: 30px;
+            border-top: 2px solid #333;
+        }
+
+        .footer p {
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <span>TS ARCHITECTURE</span>
+        </div>
+        <div class="navigation">
+            <a href="archi.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="blog.html">BLOG</a>
+            <a href="reviews.html">REVIEWS</a>
+          
+        </div>
+    </nav>
+
+    <section class="contact">
+        <h1>Contact Us</h1>
+
+        <div class="contact-form">
+            <form action="process_contact.php" method="post">
+			<label for="name">Name:</label>
+            <input type="text" placeholder="Your Name" id="name" name="name" required><br>
+    
+            <label for="email">Email:</label>
+            <input type="email" placeholder="Your Email" id="email" name="email" required><br>
+    
+            <label for="message">Message:</label>
+            <textarea placeholder="Your Message" id="message" name="message" required></textarea><br>
+    
+           <button type="submit">Send Message</button>
+</form>
+
+        </div>
+
+        <h2>Our Team</h2>
+        <div class="contact-team">
+            <div class="team-member">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-NV9q05F16g50huet5CWXj-AtbmH30NTR4A&s" alt="Architect">
+                <h3>John Doe</h3>
+                <p>Senior Architect</p>
+                <p>Contact: john.doe@tsarchitecture.com</p>
+                <p>Phone: +91 98765 43210</p>
+                <a href="mailto:john.doe@tsarchitecture.com">Email</a>
+            </div>
+            <div class="team-member">
+                <img src="https://5.imimg.com/data5/ECOM/Default/2024/11/463014876/MS/UA/SN/189560786/menshirt120-500x500.jpg" alt="Mason">
+                <h3>Raj Kumar</h3>
+                <p>Master Mason</p>
+                <p>Contact: raj.kumar@tsarchitecture.com</p>
+                <p>Phone: +91 98765 43211</p>
+                <a href="mailto:raj.kumar@tsarchitecture.com">Email</a>
+            </div>
+            <div class="team-member">
+                <img src="https://www.shutterstock.com/image-photo/young-happy-architect-designer-employee-600nw-2196608401.jpg" alt="Interior Designer">
+                <h3>Mary Smith</h3>
+                <p>Interior Designer</p>
+                <p>Contact: mary.smith@tsarchitecture.com</p>
+                <p>Phone: +91 98765 43212</p>
+                <a href="mailto:mary.smith@tsarchitecture.com">Email</a>
+            </div>
+            <div class="team-member">
+                <img src="https://asianwiki.com/images/e/ec/Kim_Soo-Hyun-1988-p02.jpg" alt="Project Manager">
+                <h3>Samuel Lee</h3>
+                <p>Project Manager</p>
+                <p>Contact: samuel.lee@tsarchitecture.com</p>
+                <p>Phone: +91 98765 43213</p>
+                <a href="mailto:samuel.lee@tsarchitecture.com">Email</a>
+            </div>
+            <div class="team-member">
+                <img src="https://www.shutterstock.com/image-photo/close-portrait-smiling-30s-caucasian-260nw-2246095709.jpg" alt="Civil Engineer">
+                <h3>Peter Johnson</h3>
+                <p>Civil Engineer</p>
+                <p>Contact: peter.johnson@tsarchitecture.com</p>
+                <p>Phone: +91 98765 43214</p>
+                <a href="mailto:peter.johnson@tsarchitecture.com">Email</a>
+            </div>
+            <div class="team-member">
+                <img src="https://media.istockphoto.com/id/1437816897/photo/business-woman-manager-or-human-resources-portrait-for-career-success-company-we-are-hiring.jpg?s=612x612&w=0&k=20&c=tyLvtzutRh22j9GqSGI33Z4HpIwv9vL_MZw_xOE19NQ=" alt="Landscape Architect">
+                <h3>Amy Brown</h3>
+                <p>Landscape Architect</p>
+                <p>Contact: amy.brown@tsarchitecture.com</p>
+                <p>Phone: +91 98765 43215</p>
+                <a href="mailto:amy.brown@tsarchitecture.com">Email</a>
+            </div>
+            <div class="team-member">
+                <img src="https://ih1.redbubble.net/image.1969287518.3266/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Assistant Architect">
+                <h3>Mark Wilson</h3>
+                <p>Assistant Architect</p>
+                <p>Contact: mark.wilson@tsarchitecture.com</p>
+                <p>Phone: +91 98765 43216</p>
+                <a href="mailto:mark.wilson@tsarchitecture.com">Email</a>
+            </div>
+            <div class="team-member">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ_B4lN8X_HxbNw9nAyJZoeUiuWwMNEcM9IA&s" alt="Structural Engineer">
+                <h3>Oliver Davis</h3>
+                <p>Structural Engineer</p>
+                <p>Contact: oliver.davis@tsarchitecture.com</p>
+                <p>Phone: +91 98765 43217</p>
+                <a href="mailto:oliver.davis@tsarchitecture.com">Email</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 TS Architecture. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

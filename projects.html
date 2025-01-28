@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TS Architecture - Projects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Abel", sans-serif;
+        }
+
+        .logo1 {
+            width: 6rem;
+            height: 6rem;
+            border: .4rem solid #dba81b;
+            position: relative;
+        }
+
+        .logo2 {
+            width: 5rem;
+            height: 5rem;
+            background-color: #000000;
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            z-index: 10;
+        }
+
+        .logo3 {
+            width: 5rem;
+            height: 5rem;
+            border: .4rem solid #dba81b;
+            background-color: #000000;
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            z-index: 20;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .brand span {
+            font-size: 3rem;
+            color: #ffffff;
+            letter-spacing: .3rem;
+            margin-left: 2rem;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background-color: #000000;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #1a1a1a;
+        }
+
+        .navbar-brand span {
+            color: #ffffff;
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        .navigation a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+
+        .navigation a:hover {
+            background-color: #dba81b;
+            color: #000000;
+        }
+
+        .projects {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .projects h1 {
+            font-size: 2.5rem;
+            color: #dba81b;
+            margin-bottom: 40px;
+        }
+
+        .project-card {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            color: #dba81b;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+			line-height: 1.8; 
+            padding: 10px 15px; 
+            text-align: left;
+            color: #cccccc;
+			
+        }
+
+        .footer {
+            background-color: #000000;
+            color: #dba81b;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 1rem;
+            border-top: 2px solid #1a1a1a;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="brand navbar-brand">
+            <div class="logo1"></div>
+            <div class="logo2"></div>
+            <div class="logo3"></div>
+            <span>TS ARCHITECTURE</span>
+        </div>
+        <div class="navigation">
+            <a href="archi.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="blog.html">BLOG</a>
+            <a href="reviews.html">REVIEWS</a>
+            <a href="contact.html">CONTACT</a>
+        </div>
+    </nav>
+
+    <section class="projects">
+        <h1>Our Latest Projects</h1>
+        <div class="project-card">
+            <img src="https://img.freepik.com/premium-photo/interior-luxury-apartment-design-floor-pillow-wall-decor-bedroom-vertical-mobile-wallpaper_795881-29824.jpg" alt="Project 1">
+            <h3>Elegant Comfort: Our Latest Bedroom Design</h3>
+            <h4>Transforming spaces into serene retreats, this bedroom interior features timeless aesthetics with a personalized touch.</h4>
+            <p>Our latest bedroom project embraces a minimalist yet sophisticated approach, focusing on clean lines and neutral tones to create a calming atmosphere. The use of natural materials, such as wooden furniture and soft textiles, adds warmth and texture to the space.
+
+One of the standout features is the use of ambient lighting. Strategically placed LED strips and bedside lamps provide a range of lighting options, enhancing the room’s versatility for relaxation or productivity. Large windows with sheer curtains allow natural light to flood the room during the day while maintaining privacy.
+
+A carefully curated selection of décor elements, including abstract wall art and potted plants, adds personality without overwhelming the simplicity of the design. The bed, the room’s focal point, boasts a luxurious upholstered headboard and high-quality bedding that invites comfort and relaxation.
+
+Storage solutions were also prioritized, with built-in wardrobes and under-bed compartments ensuring a clutter-free environment. The design’s versatility makes it suitable for various lifestyles, whether for a working professional, a couple, or a young family.
+
+This project showcases how intentional design choices can transform a bedroom into a retreat that promotes peace, relaxation, and functionality—a perfect balance of form and purpose.</p>
+		</div>
+        <div class="project-card">
+            <img src="https://media.istockphoto.com/id/146069651/photo/modern-interior-kitchen.jpg?s=612x612&w=0&k=20&c=nT-gYxHsSH_itDWds6yfq1dqsiCADQi9cKk3JzfrJyE=" alt="Project 2">
+            <h3>The Heart of the Home: A Kitchen Redefined</h3>
+            <h4>Crafted for culinary creativity, our latest project offers a harmonious balance of beauty and utility.</h4>
+            <p> This kitchen features sleek cabinetry with handleless designs, ensuring a clean and uncluttered look. High-end appliances are seamlessly integrated into the layout, offering both convenience and a cohesive aesthetic.
+
+The island, a central feature of the kitchen, doubles as a workspace and a social hub. Its waterfall countertop, crafted from polished quartz, adds an element of luxury while being highly durable and easy to maintain. Pendant lights above the island create a warm and inviting ambiance.
+
+Storage solutions were carefully planned to maximize efficiency. From pull-out pantry shelves to concealed compartments for small appliances, every inch of space is utilized. The addition of open shelving provides a spot to display decorative items or frequently used cookware, adding a touch of personality.
+
+To ensure the kitchen’s usability for avid cooks, the layout follows the work triangle principle, positioning the sink, stove, and refrigerator within easy reach. This thoughtful design enhances workflow and minimizes unnecessary movement.
+
+This kitchen is a testament to how functionality and style can coexist, making it not only a place for cooking but also a space for gathering, entertaining, and creating memories.
+
+</p>
+		</div>
+        <div class="project-card">
+            <img src="https://i.pinimg.com/564x/20/0c/fa/200cfac81e37d312d70cda0cf84d22c1.jpg" alt="Project 3">
+            <h3>Sophisticated Comfort: Latest Bathroom Project</h3>
+            <h4>A harmonious mix of elegance and innovation, our latest bathroom interior creates the perfect relaxation space.</h4>
+            <p> This bathroom exudes elegance with its combination of sleek surfaces, neutral tones, and modern fixtures. A frameless glass shower enclosure creates an open and airy feel, while the rainfall showerhead provides a spa-like experience.
+
+The freestanding bathtub is the star of the space, offering a luxurious escape from the stresses of daily life. Positioned beneath a large frosted window, it allows for privacy while inviting in soft, natural light. Surrounding it are carefully selected tiles with a subtle texture that add depth without overwhelming the design.
+
+To maximize storage, the vanity features deep drawers and a recessed medicine cabinet. Soft-close mechanisms and integrated lighting ensure practicality and comfort. A backlit mirror adds a touch of glamour and provides excellent lighting for grooming tasks.
+
+The color palette of whites and greys is complemented by accents of brushed gold in the fixtures, which lend a modern yet timeless appeal. Plants and candles are strategically placed to enhance the relaxing ambiance.
+
+This bathroom redefines what it means to create a personal sanctuary, blending luxury, functionality, and aesthetics seamlessly</p>
+		</div>
+        <div class="project-card">
+            <img src="https://dkorhome.com/wp-content/uploads/2020/03/12-Minimalist-Indoor-Garden-Design-Inspiration-You-Should-Try-1-706x1024.jpg" alt="Project 4">
+            <h3>Nature Meets Design: Our Latest Backyard Project</h3>
+            <h4>Our latest backyard project features a stylish blend of natural elements and contemporary design for the ultimate outdoor living experience.</h4>
+            <p>The design combines lush greenery with sleek, minimalist architecture to create an outdoor oasis. A wooden deck serves as the foundation, providing a warm and inviting surface for lounging or entertaining.
+
+The centerpiece of the backyard is a vertical garden that adds both beauty and privacy. It’s a sustainable feature that purifies the air while creating a visually striking backdrop. Around it, native plants and low-maintenance greenery have been planted to ensure year-round appeal with minimal upkeep.
+
+Outdoor furniture has been carefully selected to balance comfort and style. A modular seating arrangement, topped with weather-resistant cushions, ensures the space can adapt to different activities, from casual hangouts to formal gatherings. A fire pit in the center serves as both a focal point and a source of warmth on cooler evenings.
+
+Lighting plays a significant role in this project, with solar-powered lanterns and LED strips highlighting key features like pathways and planters. These lights create a magical ambiance after sunset while being energy-efficient.
+
+This backyard is not just an extension of the home but a space where residents can connect with nature, entertain guests, or simply unwind in a serene environment.
+
+</p>
+		</div>
+        
+		<div class="project-card">
+            <img src="https://www.srmhospital.co.in/wp-content/themes/eightmedi-lite/images/srm/aboutus/constant_effort.jpg" alt="Project 5">
+            <h3>Educational Excellence: College Architecture</h3>
+            <h4>From open lecture halls to collaborative spaces, this architectural project brings a contemporary approach to campus design.</h4>
+            <p>The campus features open lecture halls with tiered seating, designed to facilitate engagement and interaction. Natural light floods these spaces through large, strategically placed windows.
+
+Collaboration zones are a key highlight, with comfortable seating arrangements and writable walls that encourage brainstorming and teamwork. These zones are interspersed with traditional classrooms, ensuring a balance between structured and informal learning environments.
+
+Outdoor spaces are also integrated into the design, with landscaped courtyards and shaded seating areas providing spots for relaxation or group discussions. These areas foster a sense of community and encourage interaction among students and faculty.
+
+The use of sustainable materials and energy-efficient systems, such as solar panels and rainwater harvesting, demonstrates the commitment to environmental responsibility. This design not only reduces the campus’s carbon footprint but also teaches students the importance of sustainability.
+
+This project reimagines college architecture as a dynamic and adaptable environment that supports academic excellence, fosters collaboration, and nurtures creativity.
+
+</p>
+		</div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 TS Architecture. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
